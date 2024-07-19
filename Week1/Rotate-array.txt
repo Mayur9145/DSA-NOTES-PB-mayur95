@@ -1,0 +1,41 @@
+Time-complexity=o(n)
+Space-complexity=o(1)
+
+class Solution:
+    def reverse(self,nums,low, high):
+        while low<high:
+            nums[low],nums[high]=nums[high],nums[low]
+            low+=1
+            high-=1
+        
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n=len(nums)
+	# In case k is larger than the length of the array
+
+        k%=n
+
+        self.reverse(nums,0,n-1)
+        self.reverse(nums,0,k-1)
+        self.reverse(nums,k,n-1)
+
+    # Step 1: Reverse the entire array
+   
+    # Step 2: Reverse the first k elements
+   
+    # Step 3: Reverse the remaining n - k elements
+
+
+
+
+
+
+
+
+
+
+
+
+
