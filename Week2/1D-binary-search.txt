@@ -1,0 +1,22 @@
+
+Binary Search problem in 1D array
+Time complexity o(logn)
+Space complexity o(1)
+
+
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        n=len(nums)-1
+        low,high=0,n
+
+        while low<=high:
+            mid=low+(high-low)//2
+            if nums[mid]==target:
+                return mid
+            elif nums[mid]>target:
+                high=mid-1
+            else:
+                low=mid+1
+            
+        return -1
