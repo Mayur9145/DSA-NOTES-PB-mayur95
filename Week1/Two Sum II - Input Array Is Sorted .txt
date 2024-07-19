@@ -1,0 +1,15 @@
+Two Sum II - Input Array Is Sorted leetcode problem
+Approach- using two pointers , one at the beginning and one at the end then finding which sums up to the target 
+and according to that updating both the pointers until we get the target
+
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+         i=0,j=n-1,sum=0
+        for i and j in range(n):
+            target=list[i]+list[j]
+              if sum==target:
+                return i+1,j+1
+                elif sum >target:
+                    j--
+                else i++
