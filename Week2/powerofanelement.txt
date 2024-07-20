@@ -1,0 +1,13 @@
+Power of An element Brute force approach
+Time complexity-O(n)
+Space complexity-O(n)
+def pow(a, n):
+  ## base case condition
+    if n == 0:
+        return 1
+  ## recursive function call
+    return a * pow(a, n - 1)
+
+## Driver code
+result = pow(2, 10)
+print(result)

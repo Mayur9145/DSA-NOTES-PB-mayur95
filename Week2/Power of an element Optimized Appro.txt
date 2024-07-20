@@ -1,0 +1,23 @@
+Power of an element Optimized Approach
+
+Time Complexity-log(n)
+Space complexity-log(n)
+Base=2
+
+def pow(a, n):
+  ## base case condition
+    if n == 1:
+      return a
+    else:
+      mid = n//2
+      result = pow(a, mid)
+      finalresult = result * result
+
+      if n%2 == 0:
+        return finalresult
+      else:
+        return a*finalresult
+
+## Driver code
+result = pow(2, 16)
+print(result)
