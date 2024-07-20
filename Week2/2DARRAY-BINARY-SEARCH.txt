@@ -1,0 +1,30 @@
+Time Complexity-O(logn)
+Space Complexity-O(1)
+
+
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+      # m - number of rows
+      # n- number of colums
+      m=len(matrix)
+      n=len(matrix[0])
+     
+      low=0
+      high=m*n-1
+        ## implementation of binary search
+      while low<=high:
+         mid=low+(high-low)//2
+         row_idx=mid//n
+         col_idx=mid%n
+         midElement=matrix[row_idx][col_idx]
+         
+         if target==midElement:
+            return True
+            ## finding target to the left side of the mid
+         elif target < midElement:
+            high=mid-1
+           
+           ## finding target to the right side of the mid
+         else:
+            low=mid+1
+      return False
