@@ -1,0 +1,16 @@
+Time complexity-O(n)
+Space complexity-O(n)
+
+def SOD(num):
+  ## base case condition
+  if num < 10:
+    return num
+  ## recursive function call
+  else:
+    return num%10 + SOD(num//10)
+
+
+## Driver code
+num = 12345
+result = SOD(num)
+print(result)
