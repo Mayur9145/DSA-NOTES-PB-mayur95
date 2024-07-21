@@ -1,0 +1,16 @@
+Time Complexity-o(1)
+Space Complexity-o(1)
+class Solution:
+    def maximumProduct(self, nums: List[int]) -> int:
+        n=len(nums)
+        answer,answer1=1,1
+        nums.sort()
+        answer=nums[n-1]*nums[n-2]*nums[n-3]
+       
+        answer1=nums[0]*nums[1]*nums[n-1]
+        
+        if answer>answer1:
+            return answer
+
+        else:
+            return answer1
