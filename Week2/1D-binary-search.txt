@@ -18,5 +18,14 @@ class Solution:
                 high=mid-1
             else:
                 low=mid+1
-            
         return -1
+
+
+Approach - We have a sorted array and we are diving it into half
+# Then we are checking if our mid element is the required element
+# if yes we are returning the element
+# if not then we are checking the is our mid element higher or lower than our target
+# if our mid is higher than our target then we change our high to mid-1 and look for the target in the new search space
+# if our mid is lower than our target then we change our low to mid+1 and look for the target in the new search space
+# again we divide it into half by [ mid=low+(high-start)//2 ]
+# by doing so either we will get the target or it won't be available in our array
