@@ -13,3 +13,6 @@ class Solution:
                 elif sum >target:
                     j--
                 else i++
+
+Time Complexity-o(n)
+Space Complexity-o(1)
