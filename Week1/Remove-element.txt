@@ -14,4 +14,11 @@ class Solution:
                  i+=1
               
         
-        return i
+        return I
+
+# We are taking two pointers 
+# We are starting one pointer from the first and one from the last
+# We are beginning a while loop and wherever we get a matching with the value we are swapping
+# We are swapping the matching value with the 2nd pointer which we assigned in the last
+# Also we are incrementing i
+# At the end we are returning the i value which will give us the answer
