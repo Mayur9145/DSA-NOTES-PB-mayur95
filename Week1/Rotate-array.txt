@@ -1,3 +1,6 @@
+# This is an assignment problem
+# Approaches - rever
+
 Time-complexity=o(n)
 Space-complexity=o(1)
 
@@ -8,7 +11,7 @@ class Solution:
             low+=1
             high-=1
         
-    def rotate(self, nums: List[int], k: int) -> None:
+    def rotate(self, nums: List[int], k: int) -> None: # As there is none we do not have to return anything
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -17,9 +20,9 @@ class Solution:
 
         k%=n
 
-        self.reverse(nums,0,n-1)
-        self.reverse(nums,0,k-1)
-        self.reverse(nums,k,n-1)
+        self.reverse(nums,0,n-1) # First we are reversing the entire array
+        self.reverse(nums,0,k-1) # Then we are reversing from first to kth element
+        self.reverse(nums,k,n-1) # Then we are reversing from k to n-1th element
 
     # Step 1: Reverse the entire array
    
