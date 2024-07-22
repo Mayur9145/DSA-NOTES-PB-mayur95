@@ -27,7 +27,7 @@ Time Complexity: O(n)
 
 Space Complexity: O(1)|
 ## function definition
-def linearSearch(arr, n, target):
+# def linearSearch(arr, n, target):
   for i in range(n):
     if arr[i] == target:
       return i
