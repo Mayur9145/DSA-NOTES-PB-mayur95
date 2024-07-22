@@ -1,3 +1,4 @@
+
 Time complexity-o(n-square)
 Space complexity-o(n)
 
@@ -6,28 +7,30 @@ class Solution:
         n=len(nums)-1
      
         total=0
-        nums.sort()
-        res=[]
+        nums.sort() # we are sorting the array , bcoz we are going to apply two pointer approach
+        res=[]      # we are taking an another array
 
         for i in range(n):
-            if i>0 and nums[i]==nums[i-1]:
+            if i>0 and nums[i]==nums[i-1]:  # This condition is to check wheather we are getting any duplicate value 
+                                            # If yes then we are not using the duplicate value and movin ahead
                 continue
             
-            low=i+1
-            high=n
+            low=i+1                        # we are  strating our two pointers approach where we are initializing i 
+            high=n                         # We are initializing second pointer to the n   
             while low<high:
-                total=nums[i]+nums[low]+nums[high]
-                if total==0:
+                total=nums[i]+nums[low]+nums[high]  # we are checking the total value 
+                if total==0:                        # if the total value satisfies then we are appending the triplet 
                     res.append([nums[i], nums[low], nums[high]])
-                    while low<high and nums[low]==nums[low+1]:
-                        low+=1
+                    while low<high and nums[low]==nums[low+1]:    # we are checking for duplicate values and if they
+                        low+=1                                    # exist then we are moving ahead
 
-                    while low<high and nums[high]==nums[high-1]:
+                    while low<high and nums[high]==nums[high-1]:    # If duplicate value exist then we are moving
+                                                                        head
                         high-=1
-                    low += 1
+                    low += 1                                        # updating the two pointers
                     high -= 1
                             
-                elif total < 0:
+                elif total < 0:                                    # if total is not 0 then either of the below                                                                          # conditions will be executed
                     low += 1
                 else:
                     high -= 1
