@@ -19,7 +19,6 @@ https://colab.research.google.com/drive/1YaNIrUoCMyXzBVgXoIkLI5vuDl5I1HX6
 
 
 
-
 ## Code
 Linear Search
 
@@ -27,16 +26,23 @@ Time Complexity: O(n)
 
 Space Complexity: O(1)|
 ## function definition
-# def linearSearch(arr, n, target):
+def linearSearch(arr, n, target):
+  
   for i in range(n):
+    
     if arr[i] == target:
+      
       return i
   ## target element is not available in the array
   return -1
 
 ## Driver code
 arr = [12, 14, 11, 29, 31, 45, 62]
+
 target = 63
+
 n = len(arr)
+
 result = linearSearch(arr, n, target)
+
 print(result)
