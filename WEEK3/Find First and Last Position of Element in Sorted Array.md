@@ -82,21 +82,21 @@ class Solution:
 ```
 
 
-##>`Approach`
-###Binary Search for First Position:
+## `Approach`
+### Binary Search for First Position:
 
-###We initialize left to 0 and right to the last index of the array.
-###Use a while loop to perform binary search until left exceeds right.
-###Calculate the middle index mid.
-###If the element at mid is less than the target, move the left pointer to mid + 1.
-###If the element at mid is greater than the target, move the right pointer to mid - 1.
-###If the element at mid equals the target, record mid as the first position and move the right pointer to mid - 1 to continue searching in the left half.
-###Binary Search for Last Position:
+### We initialize left to 0 and right to the last index of the array.
+### Use a while loop to perform binary search until left exceeds right.
+### Calculate the middle index mid.
+### If the element at mid is less than the target, move the left pointer to mid + 1.
+###  If the element at mid is greater than the target, move the right pointer to mid - 1.
+### If the element at mid equals the target, record mid as the first position and move the right pointer to mid - 1 to continue searching in the left half.
+### Binary Search for Last Position:
 
-###Similar to the first binary search, but this time we adjust the pointers to continue searching in the right half when we find the target.
-###If the element at mid equals the target, record mid as the last position and move the left pointer to mid + 1.
+### Similar to the first binary search, but this time we adjust the pointers to continue searching in the right half when we find the target.
+### If the element at mid equals the target, record mid as the last position and move the left pointer to mid + 1.
 
-###Combine Results
-###After both binary searches, return the recorded positions as a list [first_position, last_position].
+### Combine Results
+### After both binary searches, return the recorded positions as a list [first_position, last_position].
 
 
