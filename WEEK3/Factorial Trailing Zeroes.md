@@ -1,26 +1,26 @@
-#Factorial Trailing Zeroes
-##Week-3 Assignment Question
-
+# Factorial Trailing Zeroes
+## Week-3 Assignment Question
+ 
 [leetcode](https://leetcode.com/problems/factorial-trailing-zeroes/description/?envType=study-plan-v2&envId=top-interview-150)
 
 
-**Time complexity -O(log~5~n) **
+**Time complexity -O(log~5~n)**
 
 **Space complexity -O(1)**
 
 
 `> Below `Code  in  Python`
 
-##Coding explanation
-###Initialize count: This will hold the number of trailing zeroes.
+## Coding explanation
+### Initialize count: This will hold the number of trailing zeroes.
 
-###Set power_of_5 to 5: We start with the first power of 5.
-###While loop: Continue as long as n is greater than or equal to the current power_of_5.
-###n // power_of_5: This gives the number of multiples of the current power of 5 in the range from 1 to 𝑛
+### Set power_of_5 to 5: We start with the first power of 5.
+### While loop: Continue as long as n is greater than or equal to the current power_of_5.
+### n// power_of_5: This gives the number of multiples of the current power of 5 in the range from 1 to 𝑛
 
-###Add this count to count.
-###Multiply power_of_5 by 5: Move to the next power of 5.
-###Return count: This is the total number of trailing zeroes in 𝑛!
+### Add this count to count.
+### Multiply power_of_5 by 5: Move to the next power of 5.
+### Return count: This is the total number of trailing zeroes in 𝑛!
 
 
 
@@ -38,7 +38,7 @@ class Solution:
         return count_of_tzero
 ```
 
-###Problem Statement-
+### Problem Statement-
 Given an integer n, return the number of trailing zeroes in n!.
 
 Note that n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1.
@@ -69,18 +69,15 @@ Constraints:
 
 Definition: Trailing zeroes in a number are the zeroes at the end of the number. For example, the number 100 has two trailing zeroes.
 
-Cause of Trailing Zeroes: Trailing zeroes are produced by factors of 10 in the number. Since 10 is the product of 2 and 5, we need to count the pairs of 2s and 5s in the factorization of 
-𝑛
-!
-n!.
+Cause of Trailing Zeroes: Trailing zeroes are produced by factors of 10 in the number. Since 10 is the product of 2 and 5, we need to count the pairs of 2s and 5s in the factorization of 𝑛!.
 
 Counting Factors of 2 and 5:
 
-###Every multiple of 5 contributes at least one factor of 5.
-###Every multiple of 25 contributes an extra factor of 5 (since 25=5^2).
-###Every multiple of 125 contributes yet another factor of 5 (since 125=5^3)
+### Every multiple of 5 contributes at least one factor of 5.
+### Every multiple of 25 contributes an extra factor of 5 (since 25=5^2).
+### Every multiple of 125 contributes yet another factor of 5 (since 125=5^3)
 
-##Approach
+## Approach
 **Initialize a counter for trailing zeroes.**
 
 **Iterate through the powers of 5:**
@@ -88,9 +85,7 @@ Counting Factors of 2 and 5:
 **For each power, count how many multiples of that power are present in the numbers from 1 to n**
 
 **Add these counts to the trailing zeroes counter.
-Stop when the power of 5 exceeds 
-𝑛
-n.**
+Stop when the power of 5 exceeds 𝑛**
 
 
 
