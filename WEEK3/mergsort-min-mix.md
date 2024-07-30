@@ -1,5 +1,5 @@
-# mergesort finding max and min in every step at 
-# the end returning the final max and min
+# Finding max and min in every step at 
+# the end returning the final max and min using DIVIDE AND CONQUER
 
 
 ## Time Complexity-O(n)
