@@ -101,7 +101,7 @@ matrix = np.array([
 ])
 
 result = sum_diagonals(matrix)
-print("The sum of the main and anti-diagonal, subtracting the middle element once (if applicable), is:", result)```
+print("The sum of the main and anti-diagonal, subtracting the middle element once (if square matrix), is:", result)```
 
 
 
