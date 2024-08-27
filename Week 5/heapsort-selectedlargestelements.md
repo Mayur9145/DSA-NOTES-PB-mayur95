@@ -7,49 +7,47 @@
 
 
 ```python
-import heapq
-
-
-def heapify(arr,N,i):
-    smallest=i
-    l=2*i+1
-    r=2*i+2
+def heapify(arr, N, i):
+    smallest = i
+    l = 2 * i + 1
+    r = 2 * i + 2
 
     if l < N and arr[smallest] > arr[l]:
-        smallest=l
+        smallest = l
     if r < N and arr[smallest] > arr[r]:
-        smallest=r
+        smallest = r
 
-    if smallest !=i:
-        arr[i],arr[smallest]=arr[smallest],arr[i]
+    if smallest != i:
+        arr[i], arr[smallest] = arr[smallest], arr[i]
+        heapify(arr, N, smallest)
 
-        heapify(arr,N,smallest)
+def build_min_heap(arr, k):
 
-def heapsort(arr):
-    N=len(arr)
+    for i in range(k // 2 - 1, -1, -1):
+        heapify(arr, k, i)
 
+def extract_k_largest(arr, k):
 
-    for i in range(N//2-1,-1,-1):
-        heapify(arr,N,i)
-
-    for i in range(N-1,0,-1):
-        arr[i],arr[0]=arr[0],arr[i]
-        heapify(arr,i,0)
+    build_min_heap(arr, k)
 
 
-if __name__=='__main__':
-    arr=[12,11,13,5,6,7]
-    heapsort(arr)
-    N=len(arr)
-    selectCount=3
+    for i in range(k, len(arr)):
+        if arr[i] > arr[0]:
+            arr[0] = arr[i]
+            heapify(arr, k, 0)
 
-    print("Sorted array in descending order is ")
-    for i in range(N):
-        print("%d" % arr[i],end=" ")
-    print("\n")
-    print("the first three largest elements are as follows-:")
-    largest=heapq.nlargest(selectCount,arr)
-    print(largest)
+
+    for i in range(k):
+        print(f"{arr[i]}", end=" ")
+
+if __name__ == '__main__':
+    arr = [12, 11, 13, 5, 6, 7]
+    k = 4
+
+    print(f"The {k} largest elements are:")
+    extract_k_largest(arr, k)
+    print()
+
 ```
 
 
